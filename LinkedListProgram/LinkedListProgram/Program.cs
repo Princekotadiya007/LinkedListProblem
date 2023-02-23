@@ -16,6 +16,7 @@ namespace LinkedListProgram
             {
                 Console.WriteLine("Welcome to Link list program");
                 Console.WriteLine("\n1.Create linkedList");
+                Console.WriteLine("Choose the Option");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,7 +24,7 @@ namespace LinkedListProgram
                         linkedList.Add(56);
                         linkedList.Add(30);
                         linkedList.Add(70);
-                        linkedList.Add(55);
+                        linkedList.Display();
                         break;
                     case 2:
                         flag = false;

@@ -20,13 +20,27 @@ namespace LinkedListProgram
             else
             {
                 Node temp = head;    
-                while(temp.Next != null)   
+                while(temp.next != null)   
                 {
-                    temp = temp.Next;
+                    temp = temp.next;
                 }
-                temp.Next = node;  
+                temp.next = node;  
             }
             Console.WriteLine("{0} Values Are Inserted", node.data);
+        }
+        public void Display()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Liked List Is Empty");
+            }
+            Console.WriteLine("Linked list IS :");
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + "");
+                temp = temp.next;
+            }
         }
     }
 }
