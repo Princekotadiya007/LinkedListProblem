@@ -10,21 +10,21 @@ namespace LinkedListProgram
     {
         public Node head;
         //creating add method to add the data in linked list sequentially
-        public void Add(int data) //56  30  70
+        public void Add(int data) //56  30  70 
         {
-            Node node = new Node(data); //56 
+            Node node = new Node(data);  
             if(head == null)
             {
-                this.head = node;   //56  30
+                this.head = node;   //56  30 70
             }
             else
             {
-                Node temp = head;      // 56
-                while(temp.Next != null) // 56   
+                Node temp = head;    
+                while(temp.Next != null)   
                 {
                     temp = temp.Next;
                 }
-                temp.Next = node;   //30
+                temp.Next = node;  
             }
             Console.WriteLine("{0} Values Are Inserted", node.data);
         }
