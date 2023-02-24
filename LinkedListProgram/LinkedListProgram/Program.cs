@@ -15,7 +15,7 @@ namespace LinkedListProgram
             while (flag)
             {
                 Console.WriteLine("Welcome to Link list program");
-                Console.WriteLine("\n1.Create linkedList, \n2.AddFirstLinkedList");
+                Console.WriteLine("\n1.Create linkedList, \n2.AddFirstLinkedList, \n3.First Deleted");
                 Console.WriteLine("Choose the Option");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -35,6 +35,14 @@ namespace LinkedListProgram
                         linkedList.Display();
                         break;
                     case 3:
+                        Console.WriteLine("The first element deleted");
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveFirstNode();
+                        linkedList.Display();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }

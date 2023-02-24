@@ -38,17 +38,29 @@ namespace LinkedListProgram
         public void ReversOrder(int data)
         {
             Node node = new Node(data);
-            if(head == null)
+            if(this.head == null)
             {
-                head = node;
+                this.head = node;
             }
             else
             {
-                Node temp = head;
+                Node temp = this.head;
                 head = node;
                 head.next = temp;
             }
             Console.WriteLine("{0} inserted into linked list ", node.data);
+        }
+        public void RemoveFirstNode()
+        {
+            if(head == null)
+            {
+                Console.WriteLine("Linked list is Empty");
+            }
+            else
+            {
+                this.head = this.head.next;
+                Console.WriteLine("The first element is deleted");
+            }
         }
         public void Display()
         {
