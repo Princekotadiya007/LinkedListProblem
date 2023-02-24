@@ -29,9 +29,9 @@ namespace LinkedListProgram
                         break;
                     case 2:
                         Console.WriteLine("Adding Data in Linked List in first position");
-                        linkedList.AddFirst(70);
-                        linkedList.AddFirst(30);
-                        linkedList.AddFirst(56);
+                        linkedList.ReversOrder(70);
+                        linkedList.ReversOrder(30);
+                        linkedList.ReversOrder(56);
                         linkedList.Display();
                         break;
                     case 3:

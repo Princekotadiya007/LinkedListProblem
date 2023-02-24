@@ -28,12 +28,27 @@ namespace LinkedListProgram
             }
             Console.WriteLine("{0} Values Are Inserted", node.data);
         }
-        public void AddFirst(int data) 
+        //public void AddFirst(int data) 
+        //{
+        //    Node node = new Node(data);
+        //    node.next = this.head;     
+        //    this.head = node;  
+        //    Console.WriteLine("{0} inserted into linked list ", node.data); 
+        //}
+        public void ReversOrder(int data)
         {
             Node node = new Node(data);
-            node.next = this.head;     
-            this.head = node;  
-            Console.WriteLine("{0} inserted into linked list ", node.data); 
+            if(head == null)
+            {
+                head = node;
+            }
+            else
+            {
+                Node temp = head;
+                head = node;
+                head.next = temp;
+            }
+            Console.WriteLine("{0} inserted into linked list ", node.data);
         }
         public void Display()
         {
@@ -42,7 +57,7 @@ namespace LinkedListProgram
             {
                 Console.WriteLine("Liked List Is Empty");
             }
-            Console.WriteLine("Linked list IS :");
+            Console.WriteLine("Linked list is :");
             while (temp != null)
             {
                 Console.WriteLine(temp.data + "");
