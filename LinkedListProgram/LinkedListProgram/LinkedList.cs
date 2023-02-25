@@ -101,6 +101,22 @@ namespace LinkedListProgram
             }
                 //Console.WriteLine("Given value: " + value + " is not present in Linked list");
         }
+        public void Size()
+        {
+            Node temp = head;
+            int count = 0;
+            if(temp == null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            while(temp != null)
+            {
+                Console.WriteLine(temp.data+"");
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("Count size linkedlist:"+count);
+        }
         public void Display()
         {
             Node temp = this.head;
