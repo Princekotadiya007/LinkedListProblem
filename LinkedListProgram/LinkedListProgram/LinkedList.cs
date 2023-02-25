@@ -66,7 +66,7 @@ namespace LinkedListProgram
         {
             if (head == null)
             {
-                Console.WriteLine("linked list is empty");
+                Console.WriteLine("linked list is empty"); 
             }
             if (head.next == null)
             {
@@ -82,6 +82,24 @@ namespace LinkedListProgram
                 lastNode.next = null;
                 Console.WriteLine("the last element deleted");
             }
+        }
+        public void Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("Given value: " + value + " is present in Linked list");
+                    return;
+                }
+                temp = temp.next;
+            }
+            if (temp == null)
+            {
+                Console.WriteLine("Given value: " + value + " is not present in Linked list");
+            }
+                //Console.WriteLine("Given value: " + value + " is not present in Linked list");
         }
         public void Display()
         {
