@@ -9,6 +9,9 @@ namespace LinkedListProgram
     public class LinkedList
     {
         public Node head;
+        public Node tailNode;
+        //Node node;
+
         //creating add method to add the data in linked list sequentially
         public void Add(int data) //56  30  70 
         {
@@ -28,6 +31,18 @@ namespace LinkedListProgram
             }
             Console.WriteLine("{0} Values Are Inserted", node.data);
         }
+        public void AddFirst(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+                tailNode = head = node;
+            else
+            {
+                node.next = head;
+                head = node;
+            }
+        }
+
         //public void AddFirst(int data) 
         //{
         //    Node node = new Node(data);
@@ -99,7 +114,10 @@ namespace LinkedListProgram
             {
                 Console.WriteLine("Given value: " + value + " is not present in Linked list");
             }
-                //Console.WriteLine("Given value: " + value + " is not present in Linked list");
+        }
+        public void Append(int data)
+        {
+            Add(data);
         }
         public void Size()
         {

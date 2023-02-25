@@ -15,7 +15,7 @@ namespace LinkedListProgram
             while (flag)
             {
                 Console.WriteLine("Welcome to Link list program");
-                Console.WriteLine("\n1.Create linkedList, \n2.AddFirstLinkedList, \n3.First element deleted, \n4.Last element deleted,\n5.Search LinkedList,\n6.Size LinkedList");
+                Console.WriteLine("\n1.Create linkedList, \n2.AddFirstLinkedList, \n3.First element deleted, \n4.Last element deleted,\n5.Search LinkedList,\n6.Size LinkedList,\n7.AddFiest element");
                 Console.WriteLine("Choose the Option");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -64,8 +64,15 @@ namespace LinkedListProgram
                         linkedList.Add(40);
                         linkedList.Add(70);
                         linkedList.Size();
+                        linkedList.Display();
                         break;
                     case 7:
+                        linkedList.Append(70);
+                        linkedList.Append(30);
+                        linkedList.Append(56);
+                        linkedList.Display();
+                        break;
+                    case 8:
                         flag = false;
                         break;
                 }
